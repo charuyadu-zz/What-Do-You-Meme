@@ -1,37 +1,32 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
 
-    <a :class="{ 'ia-active':isOpen }" @click="isOpen = !isOpen" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" >
+    <a :class="{ 'is-active':isOpen }" @click="isOpen = !isOpen" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div :class="{ 'ia-active':isOpen }" class="navbar-menu">
+  <div :class="{ 'is-active':isOpen }" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
 
-      <a class="navbar-item">
-        Documentation
-      </a>
 
-       <router-link to="/home"  class="navbar-item" active-class="is-current" exact>Home</router-link> |
-      <router-link to="/about"  class="navbar-item" active-class="is-current">About</router-link>
-      <router-link to="/game"  class="navbar-item" active-class="is-current">Game</router-link>
+      <router-link to="/" class="navbar-item" active-class="is-current" exact>Home</router-link>
+      <router-link to="/about" class="navbar-item" active-class="is-current">About</router-link>
+      <router-link to="/game" class="navbar-item" active-class="is-current">Game</router-link>
+
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More
         </a>
 
-        <div class="navbar-dropdown is-current" >
+        <div class="navbar-dropdown">
           <a class="navbar-item">
             About
           </a>
@@ -49,13 +44,13 @@
       </div>
     </div>
 
-    <div class="navbar-end" href="/login">
+    <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light">
+          <a class="button is-light" href="/login">
             Log in
           </a>
         </div>
@@ -70,13 +65,12 @@ export default {
   data: ()=>({
     isOpen: false
   })
-
 }
 </script>
 
 <style>
   .is-current {
     font-weight: bold;
-    color: darkgreen;
+    color: blueviolet
   }
 </style>

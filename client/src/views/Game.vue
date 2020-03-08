@@ -1,22 +1,36 @@
 <template>
   <div class="container">
-      <div class="card"> 
-       <div class="card-content">
-            <h1 class=""></h1>
-       </div>
+      <div class="card">
+        <div class="card-content">
+            <h1 class="title is-1">
+                Game Page
+            </h1>
+        </div>
       </div>
+
+      <div class="card">
+      <div class="card-content">
+        <ul>
+          <li v-for="player in Players" :key="player.Name">
+            {{player.Name}} {{player.Score}}
+          </li>
+        </ul>
+      </div>
+
+      <img :src="CurrentPicture"  class="card-image"/>
+    </div>
+
   </div>
 </template>
 
-<script
-import { Players, PictureDeck, CurrentPicture, Init} from '../models/Game '
+<script>
+import { Players, PictureDeck, CurrentPicture, Init } from "../models/Game";
 Init();
-
 export default {
   name: 'Home',
-  data:{}=>({
+  data:()=>({
     Players,
-    PictureDesk,
+    PictureDeck,
     CurrentPicture
   }),
   components: {
@@ -24,8 +38,9 @@ export default {
   }
 }
 </script>
-<style>
-  img.card-image{
+
+<style >
+  img.card-image {
     width: 100%
   }
 </style>
