@@ -4,10 +4,14 @@
   "description": "I have an undergrad degree in **Computer Science**. One of the courses I took was based on *Web Technology* and I built a website on **7 wonders of the world** (new as well as ancient) as my final project. I designed the web pages using **HTML** and **CSS**. For the final year project, I created an *encryption software* using **java** technology. The encryption code on the sender as well the receiver systems enabled sharing of sensitive information using a simple conversion method to encrypt or decrypt, rendering the text unintelligible to anyone who does not have the software installed on their system. I was employed as a **Software Developer** for past 6 years, working on **IBM BPM** technology to develop applications. BPM stands for **Business Process Management**, first introduced by *Lombardi* and later acquired by IBM, hence the name **IBM BPM**. The application handled day-to-day business activities of a company such as processing Invoices, maintaining accounts, journals and a master data system as well as a ticketing system for any queries related to those activities.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
   "dependencies": {
     "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2"
   },
   "repository": {
     "type": "git",
